@@ -1,21 +1,13 @@
 from selenium import webdriver
 import time
+from public import login_zb,logout
 
 driver = webdriver.Chrome("F:\driver\chromedriver_win32\chromedriver.exe")
-time.sleep(5)
 driver.get("http://120.79.59.41/#/login")
 driver.maximize_window()
 time.sleep(1)
 #登录
-#输入公司名称
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[1]/div/div/div[1]/input").send_keys("金康高科")
-#输入账号信息
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[2]/div/div/div[1]/input").send_keys("guest")
-#输入密码
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[3]/div/div/div[1]/input").send_keys("789996")
-#点击登录按钮
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/div[2]/button/span").click()
-time.sleep(5)
+login_zb.login(driver)
 #点击系统设置菜单
 driver.find_element_by_xpath("//*[@id='app']/div/div[2]/div/ul/li[7]/a").click()
 time.sleep(3)
@@ -40,6 +32,5 @@ driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]
 driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[2]/div[2]/div/div[5]/div/label/span/span").click()
 #点击【确定】按钮
 driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[4]/button[2]/span").click()
-
-
-
+#调用退出方法
+logout.logout(driver)

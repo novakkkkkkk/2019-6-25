@@ -1,19 +1,14 @@
 from selenium import webdriver
 import time
+from public import login_fws,logout
 
 driver = webdriver.Chrome("F:\driver\chromedriver_win32\chromedriver.exe")
-time.sleep(3)
 driver.get("http://120.79.59.41/#/login")
 driver.maximize_window()
 time.sleep(1)
-#输入公司名称
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[1]/div/div/div[1]/input").send_keys("利楚")
-#输入账号信息
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[2]/div/div/div[1]/input").send_keys("admin")
-#输入密码
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/form/div[3]/div/div/div[1]/input").send_keys("123456")
-#点击登录按钮
-driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div/div/div[2]/button/span").click()
+
+#调用登录模块
+login_fws.login(driver)
 
 #点击进入组织管理->门店管理菜单
 time.sleep(3)
@@ -30,7 +25,7 @@ time.sleep(2)
 driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/ul/li[34]/span").click()
 time.sleep(2)
 #输入门店名称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div[1]/input").send_keys("自动化测试门店002")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div[1]/input").send_keys("自动化测试门店003")
 #选择门店类型
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[4]/div/div/div/input").click()
 time.sleep(1)
@@ -51,7 +46,7 @@ driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[7]/div
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[8]/div/div/input").send_keys("87311111")
 
 #填写账号
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[1]/div/div[1]/input").send_keys("md-zdh002")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[1]/div/div[1]/input").send_keys("md-zdh003")
 #填写密码
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[2]/div/div/input").send_keys("123456")
 #点击完成创建按钮
@@ -62,6 +57,11 @@ driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div/div[1]/di
 time.sleep(2)
 #点击取消按钮
 driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div/div[1]/div[4]/div/div[2]/div/button/span").click()
+time.sleep(3)
+
+#退出登录
+logout.logout(driver)
+
 
 
 
