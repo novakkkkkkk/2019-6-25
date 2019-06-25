@@ -4,26 +4,29 @@ import time
 from public import login_yyzx,logout
 
 
-driver = webdriver.Chrome("F:\driver\chromedriver_win32\chromedriver.exe")
-driver.get("http://120.79.59.41/#/login")
+driver = webdriver.Chrome("F:\driver\chromedriver_win32_0625\chromedriver.exe")
+driver.get("http://120.79.59.41:81/#/login")
 driver.maximize_window()
 time.sleep(3)
 
 #调用登录模块
 login_yyzx.login(driver)
 
-#点击组织管理->服务商管理菜单
-driver.find_element_by_xpath("//*[@id='app']/div/div[2]/div/ul/li[2]/a").click()
-time.sleep(5)
+#点击组织管理
+time.sleep(2)
+driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/ul/li[2]/a").click()
+time.sleep(3)
+#点击服务商管理菜单
 driver.find_element_by_xpath("//*[@id='menu_left']/ul/li[1]/a").click()
+time.sleep(2)
 #点击新建服务商按钮
-driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div/div[1]/div[3]/div[1]/div[2]/div[1]/button/span").click()
-time.sleep(5)
+driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[3]/div[1]/div[2]/div[1]/button/span").click()
+time.sleep(3)
 #输入服务商的基本信息
 #输入服务商全称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh1")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh2")
 #输入服务商简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh1")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh2")
 #输入所属收银系统
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("美瑞华")
 #填写负责人
@@ -44,7 +47,7 @@ driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[3]/div/button/span
 #等待页面加载3秒
 time.sleep(3)
 #在开票信息页面，点击下一步按钮，进入填写账号页面
-driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div/div[1]/div[2]/form/div[2]/div[3]/div/button/span").click()
+driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[2]/form/div[2]/div[3]/div/button/span").click()
 time.sleep(3)
 #填写服务商的账号信息
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div[1]/input").send_keys("ceshi100")

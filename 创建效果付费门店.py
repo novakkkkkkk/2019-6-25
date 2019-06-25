@@ -25,7 +25,7 @@ time.sleep(2)
 driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/ul/li[34]/span").click()
 time.sleep(2)
 #输入门店名称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div[1]/input").send_keys("自动化测试门店003")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div[1]/input").send_keys("自动化测试门店004")
 #选择门店类型
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[4]/div/div/div/input").click()
 time.sleep(1)
@@ -46,7 +46,7 @@ driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[7]/div
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[8]/div/div/input").send_keys("87311111")
 
 #填写账号
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[1]/div/div[1]/input").send_keys("md-zdh003")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[1]/div/div[1]/input").send_keys("md-zdh004")
 #填写密码
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div[2]/div/div/input").send_keys("123456")
 #点击完成创建按钮

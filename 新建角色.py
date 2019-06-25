@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 from public import login_zb,logout
 
-driver = webdriver.Chrome("F:\driver\chromedriver_win32\chromedriver.exe")
+driver = webdriver.Chrome("F:\driver\chromedriver_win32_2.46\chromedriver.exe")
 driver.get("http://120.79.59.41/#/login")
 driver.maximize_window()
 time.sleep(1)
@@ -24,9 +24,9 @@ time.sleep(1)
 driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/ul/li[1]/span").click()
 time.sleep(3)
 #填写角色名称
-driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[1]/form/div/div[2]/div/div/input").send_keys("总部销售员")
+driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[1]/form/div/div[2]/div/div/input").send_keys("总部市场调研员")
 #填写角色说明
-driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[1]/form/div/div[3]/div/div/input").send_keys('总部销售产品的人员')
+driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[1]/form/div/div[3]/div/div/input").send_keys('总部市场的人员')
 #勾选角色的权限
 driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[2]/div[2]/div/div[3]/div/label/span/span").click()
 driver.find_element_by_xpath("//*[@id='app']/div/div[3]/div/div[2]/div[1]/div[5]/div/div[2]/div[2]/div/div[5]/div/label/span/span").click()
