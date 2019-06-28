@@ -1,14 +1,14 @@
 from selenium import webdriver
+from public import login
+from public import logout
 import time
-from public import login_fws,logout
 
 driver = webdriver.Chrome("F:\driver\chromedriver_win32_0625\chromedriver.exe")
 driver.get("http://120.79.59.41:81/#/login")
 driver.maximize_window()
 time.sleep(1)
 
-#调用public中的登录模块
-login_fws.login(driver)
+login.login(driver,'利楚','admin','123456')
 
 #点击进入组织管理
 time.sleep(3)
@@ -21,9 +21,9 @@ time.sleep(2)
 driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[2]/div[2]/div[1]/button/span").click()
 time.sleep(3)
 #输入商家名称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("自动化测试商家007")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("zdhsj008")
 #输入商家简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div/input").send_keys("自动化商家007")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div/input").send_keys("sjjc008")
 #填写负责人信息
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("肖磊")
 #填写电话
@@ -39,7 +39,7 @@ driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[3]/div/button/span
 time.sleep(2)
 
 #输入商家账号信息
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[3]/div/div/input").send_keys("sj-zdh007")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[3]/div/div/input").send_keys("sj-zdh008")
 #填写密码
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div/input").send_keys("123456")
 #再次输入密码
@@ -50,6 +50,4 @@ driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[6]/div/di
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[2]/div/button/span").click()
 time.sleep(3)
 
-#调用public中的退出模块
 logout.logout(driver)
-

@@ -1,16 +1,16 @@
 from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
+from public import login
+from public import logout
 import time
-from public import login_yyzx,logout
 
-
-driver = webdriver.Chrome("F:\driver\chromedriver_win32_0625\chromedriver.exe")
-driver.get("http://120.79.59.41:81/#/login")
+path ='F:\driver\chromedriver_win32_0625\chromedriver.exe'
+url = 'http://120.79.59.41:81/#/login'
+driver = webdriver.Chrome(path)
+driver.get(url)
 driver.maximize_window()
-time.sleep(3)
+time.sleep(1)
 
-#调用登录模块
-login_yyzx.login(driver)
+login.login(driver,'金康高科华中区','admin','123456')
 
 #点击组织管理
 time.sleep(2)
@@ -24,9 +24,9 @@ driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/di
 time.sleep(3)
 #输入服务商的基本信息
 #输入服务商全称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh2")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh3")
 #输入服务商简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh2")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh3")
 #输入所属收银系统
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("美瑞华")
 #填写负责人
@@ -59,9 +59,6 @@ driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[6]/div/di
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[7]/div/div/input").send_keys("张三")
 #点击保存按钮
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[2]/div/button/span").click()
-time.sleep(5)
+time.sleep(3)
 
-#调用退出模块
 logout.logout(driver)
-
-
