@@ -1,7 +1,7 @@
 # coding=utf-8
 import time
 
-#登录
+#登录模块
 def login(driver,companyname,username,psw):
     time.sleep(1)
     driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div[2]/div[1]/div[2]/span").click()
