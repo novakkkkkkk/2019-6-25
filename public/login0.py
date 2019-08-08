@@ -1,13 +1,8 @@
-#!/usr/bin/env python 
-# -*- coding:utf-8 -*-
-from selenium import webdriver
+# coding=utf-8
 import time
 
-
-url  = 'http://120.79.59.41:81/#/login'
-def open(driver,companyname,username,psw):
-    driver.get(url)
-    driver.maximize_window()
+#登录模块
+def login(driver,companyname,username,psw):
     time.sleep(1)
     driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div[2]/div[1]/div[2]/span").click()
     driver.find_element_by_xpath("//*[@id='app']/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div[1]/input").send_keys(companyname)

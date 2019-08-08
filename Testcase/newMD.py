@@ -4,14 +4,10 @@ from public import logout
 import time
 
 
-path ='F:\driver\chromedriver_win32_0625\chromedriver.exe'
-url = 'http://120.79.59.41:81/#/login'
-driver = webdriver.Chrome(path)
-driver.get(url)
-driver.maximize_window()
-time.sleep(1)
+driver = webdriver.Chrome('F:\driver\chromedriver_win32_0625\chromedriver.exe')
 
-login.login(driver, '利楚', 'admin', '123456')
+login.open(driver, '利楚', 'admin', '123456')
+time.sleep(2)
 driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[2]/a').click()
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="menu_left"]/ul/li[3]/a').click()
