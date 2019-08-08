@@ -21,9 +21,9 @@ time.sleep(2)
 driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[2]/div[2]/div[1]/button/span").click()
 time.sleep(3)
 #输入商家名称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("zdhsj008")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("zdhsj009")
 #输入商家简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div/input").send_keys("sjjc008")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div/input").send_keys("sjjc009")
 #填写负责人信息
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("肖磊")
 #填写电话
@@ -39,7 +39,7 @@ driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[3]/div/button/span
 time.sleep(2)
 
 #输入商家账号信息
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[3]/div/div/input").send_keys("sj-zdh008")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[3]/div/div/input").send_keys("sj-zdh009")
 #填写密码
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div/input").send_keys("123456")
 #再次输入密码

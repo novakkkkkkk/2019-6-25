@@ -24,9 +24,9 @@ driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/di
 time.sleep(3)
 #输入服务商的基本信息
 #输入服务商全称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh5")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh8")
 #输入服务商简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh5")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh8")
 #输入所属收银系统
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("美瑞华")
 #填写负责人
@@ -50,7 +50,7 @@ time.sleep(3)
 driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[2]/form/div[2]/div[3]/div/button/span").click()
 time.sleep(3)
 #填写服务商的账号信息
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div[1]/input").send_keys("ceshi100")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div[1]/input").send_keys("ceshi103")
 #填写密码
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[5]/div/div/input").send_keys("123456")
 #确认密码
