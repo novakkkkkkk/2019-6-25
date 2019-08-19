@@ -18,7 +18,7 @@ driver.find_element_by_xpath('//*[@id="app"]/div/div[4]/div/div[2]/div/div[1]/di
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="app"]/div/div[4]/div/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[3]/table/tbody/tr/td[10]/div/span[1]').click()
 time.sleep(1)
-driver.find_element_by_xpath('//*[@id="app"]/div/div[4]/div/div[2]/div/div[1]/div[1]/div/form/div[3]/div/div/div/input').send_keys(100)
+driver.find_element_by_xpath('//*[@id="app"]/div/div[4]/div/div[2]/div/div[1]/div[1]/div/form/div[3]/div/div/div/input').send_keys(600)
 #上传图片
 driver.find_element_by_name('fileX').send_keys(file)   #定位上传按钮
 time.sleep(1)
