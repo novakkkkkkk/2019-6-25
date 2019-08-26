@@ -2,6 +2,7 @@ from selenium import webdriver
 from public import login
 from public import logout
 import time
+from excel import data
 
 driver = webdriver.Chrome('F:\driver\chromedriver_win32_0625\chromedriver.exe')
 login.open(driver, '金康高科华中区', 'admin', '123456')
@@ -18,22 +19,22 @@ driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/di
 time.sleep(3)
 #输入服务商的基本信息
 #输入服务商全称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys("服务商zdh8")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[1]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[0])
 #输入服务商简称
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys("服务商简称zdh8")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[2]/div/div[1]/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[1])
 #输入所属收银系统
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys("美瑞华")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[3]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[2])
 #填写负责人
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[4]/div/div/input").send_keys("肖磊")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[4]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[3])
 #填写手机号
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[5]/div/div/input").send_keys("15012345678")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[5]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[4])
 #找到省份输入框的位置
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[6]/div/div[1]/div[1]/span").click()
 time.sleep(3)
 #输入省份、城市、区域信息
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[6]/div/div[1]/div[1]/div/ul/li[1]").click()
 #填写具体地址
-driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[6]/div/div[2]/div/input").send_keys("天安门广场")
+driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[1]/form/div[6]/div/div[2]/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\excel\test_fws.xls')[5])
 #选择OEM信息并点击
 driver.find_element_by_xpath("//*[@id='companyinfos_box']/div[2]/form/div/div/div/label[2]/span[1]/span").click()
 #点击下一步按钮，进入填写开票信息页面
@@ -44,13 +45,13 @@ time.sleep(3)
 driver.find_element_by_xpath("//*[@id='app']/div/div[4]/div/div[2]/div/div[1]/div[2]/form/div[2]/div[3]/div/button/span").click()
 time.sleep(3)
 #填写服务商的账号信息
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div[1]/input").send_keys("ceshi103")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[4]/div/div[1]/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\lesson0820\test_fws.xls')[6])
 #填写密码
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[5]/div/div/input").send_keys("123456")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[5]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\lesson0820\test_fws.xls')[7])
 #确认密码
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[6]/div/div/input").send_keys("123456")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[6]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\lesson0820\test_fws.xls')[8])
 #填写负责人姓名
-driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[7]/div/div/input").send_keys("张三")
+driver.find_element_by_xpath("//*[@id='newnumber_box']/div[1]/form/div[7]/div/div/input").send_keys(data.read_excela(r'D:\Python project\yunyingpingtai\lesson0820\test_fws.xls')[9])
 #点击保存按钮
 driver.find_element_by_xpath("//*[@id='newnumber_box']/div[2]/div/button/span").click()
 time.sleep(3)

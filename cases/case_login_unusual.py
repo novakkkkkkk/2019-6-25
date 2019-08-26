@@ -28,7 +28,7 @@ class yyptTestCase(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTest(yyptTestCase('test_login_unusual'))
-    filepath =r'D:\Python project\yunyingpingtai2\test_report\1.html'
+    filepath =r'D:\Python project\yunyingpingtai\test_report\1.html'
     fp = open(filepath,'wb')
     #file_prefix = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
     #fp = open(r'D:\Python project\yunyingpingtai2\test_report'+file_prefix+'_result.html','wb')
